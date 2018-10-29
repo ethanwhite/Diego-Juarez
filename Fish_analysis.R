@@ -11,8 +11,11 @@ fish_data_cat = fish_data %>%
 fish_data_cat<-filter(fish_data_cat, scalelength > 1 )
 
 
+library(ggplot2)
 
-
+ggplot(data=fish_data_cat,mapping = aes(x=length, y=scalelength,color=lakeid))+
+  geom_point()
+  
 
 
 
